@@ -32,7 +32,7 @@ A collection of useful code examples and patterns built with Next.js, TypeScript
 - TypeScript interfaces and type safety
 - Error handling and display
 
-### Infinite Carousel
+### Carousel
 
 - Location: `/examples/infinite-carousel`
 - Smooth infinite scrolling carousel implementation

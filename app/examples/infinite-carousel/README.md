@@ -1,4 +1,4 @@
-# Infinite Carousel Example
+# Carousel Example
 
 This example demonstrates how to create a smooth, infinite carousel component using React and TypeScript. The carousel features automatic sliding, manual navigation, and a seamless infinite scroll effect.
 
@@ -10,6 +10,34 @@ This example demonstrates how to create a smooth, infinite carousel component us
 - Responsive design
 - TypeScript interfaces for type safety
 - Tailwind CSS for styling
+
+## Required Configuration
+
+Before using the Carousel component, you need to add the following configuration to your `tailwind.config.js`:
+
+```js
+module.exports = {
+  // ... other config
+  theme: {
+    extend: {
+      keyframes: {
+        carousel: {
+          to: { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        carousel: "carousel var(--duration, 30s) linear infinite",
+      },
+    },
+  },
+};
+```
+
+This configuration:
+
+- Defines a `carousel` keyframe animation that moves content horizontally
+- Sets up an animation utility class that can be customized with `--duration` CSS variable
+- Default duration is 30 seconds if not specified
 
 ## Implementation Details
 
@@ -34,32 +62,25 @@ This example demonstrates how to create a smooth, infinite carousel component us
 
 ### Code Structure
 
-- `InfiniteCarousel.tsx`: Main component with carousel logic
+- `Carousel.tsx`: Main component with carousel logic
 - `page.tsx`: Example page implementation
-- TypeScript interfaces for props and items
 - Tailwind CSS for styling
 
 ## Usage
 
 ```tsx
-import { InfiniteCarousel } from "./components/InfiniteCarousel";
-
-const items = [
-  { id: 1, title: "Item 1", color: "bg-blue-500" },
-  { id: 2, title: "Item 2", color: "bg-green-500" },
-  // ... more items
-];
+import { Carousel } from "./components/Carousel";
 
 function MyComponent() {
-  return <InfiniteCarousel items={items} />;
+  return (
+    <Carousel>
+      <div className="bg-blue-500">Item 1</div>
+      <div className="bg-green-500">Item 2</div>
+      <div className="bg-red-500">Item 3</div>
+    </Carousel>
+  );
 }
 ```
-
-## Props
-
-| Prop  | Type           | Description               |
-| ----- | -------------- | ------------------------- |
-| items | CarouselItem[] | Array of items to display |
 
 ## Best Practices
 
