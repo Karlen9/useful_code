@@ -25,13 +25,6 @@ A collection of useful code examples and patterns built with Next.js, TypeScript
 
 ## Examples
 
-### Form Validation
-
-- Location: `/examples/form-validation`
-- Demonstrates form handling and validation
-- TypeScript interfaces and type safety
-- Error handling and display
-
 ### Carousel
 
 - Location: `/examples/infinite-carousel`
@@ -67,32 +60,16 @@ A collection of useful code examples and patterns built with Next.js, TypeScript
   }
   ```
 
-### Data Fetching (Coming Soon)
-
-- Location: `/examples/data-fetching`
-- Different ways to fetch data in Next.js
-- Server and client-side data fetching
-- Error handling and loading states
-
-### Authentication (Coming Soon)
-
-- Location: `/examples/auth`
-- Basic authentication implementation
-- Protected routes
-- Session management
-
 ## Project Structure
 
 ```
 useful-code/
 ├── app/
 │   ├── examples/
-│   │   ├── form-validation/
+│   │   ├── infinite-carousel/
 │   │   │   ├── components/
 │   │   │   ├── page.tsx
 │   │   │   └── README.md
-│   │   ├── data-fetching/
-│   │   └── auth/
 │   ├── layout.tsx
 │   └── page.tsx
 ├── components/
