@@ -51,6 +51,21 @@ A collection of useful code examples and patterns built with Next.js, TypeScript
     },
   }
   ```
+- Usage example:
+
+  ```tsx
+  import { Carousel } from "./components/Carousel";
+
+  function MyComponent() {
+    return (
+      <Carousel>
+        <div className="bg-blue-500">Item 1</div>
+        <div className="bg-green-500">Item 2</div>
+        <div className="bg-red-500">Item 3</div>
+      </Carousel>
+    );
+  }
+  ```
 
 ### Data Fetching (Coming Soon)
 
